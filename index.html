@@ -4,67 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nome do Restaurante</title>
-    <link rel="stylesheet" href="style.css">
- <script>
-  body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    <style> /* CSS dentro da tag <style> */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-header {
-    background-color: #f0f0f0;
-    padding: 20px;
-}
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Para alinhar os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens */
-}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-nav li {
-    margin: 0 15px; /* Espaçamento entre os itens */
-}
+        nav li {
+            margin: 0 15px;
+        }
 
-#hero {
-    background-image: url("imagem_fundo.jpg"); /* Imagem de fundo */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-}
+        #hero {
+            background-image: url("imagem_fundo.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
 
-#hero h1 {
-    font-size: 3em;
-}
+        #hero h1 {
+            font-size: 3em;
+        }
 
-.prato {
-  display: flex; /* Alinha imagem e texto lado a lado */
-  align-items: center; /* Alinha verticalmente */
-  margin-bottom: 20px; /* Espaçamento entre os pratos */
-}
+        .prato {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
-.prato img {
-  max-width: 200px; /* Largura máxima da imagem */
-  margin-right: 20px; /* Espaçamento entre imagem e texto */
-}
+        .prato img {
+            max-width: 200px;
+            margin-right: 20px;
+        }
 
-/* Estilos para as outras seções... */
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
- </script>
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -92,16 +89,16 @@ footer {
     <section id="menu">
         <h2>Menu</h2>
         <div class="prato">
-          <img src="imagem_prato.jpg" alt="Nome do Prato">
-          <h3>Nome do Prato</h3>
-          <p>Descrição do prato.</p>
+            <img src="imagem_prato.jpg" alt="Nome do Prato">
+            <h3>Nome do Prato</h3>
+            <p>Descrição do prato.</p>
         </div>
-        </section>
+    </section>
 
     <section id="reservas">
-      <h2>Reservas</h2>
-      <form>
-        </form>
+        <h2>Reservas</h2>
+        <form>
+            </form>
     </section>
 
     <section id="contato">
@@ -113,18 +110,16 @@ footer {
         <p>&copy; 2023 Nome do Restaurante</p>
     </footer>
 
-    <script>
-     // Exemplo: rolagem suave para as seções
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    <script> // JavaScript dentro da tag <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-    });
-});
     </script>
- 
 </body>
 </html>
