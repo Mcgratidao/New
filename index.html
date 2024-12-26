@@ -1,16 +1,130 @@
- <!DOCTYPE html>
- <html>
-  <head>
-    <title> Display </title>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome do Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+ <script>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para alinhar os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens */
+}
 
-  </head>
-  <body>
-  <h4> olá! Iremos fazer alguns testes <h4>
+nav li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
 
+#hero {
+    background-image: url("imagem_fundo.jpg"); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
 
+#hero h1 {
+    font-size: 3em;
+}
 
+.prato {
+  display: flex; /* Alinha imagem e texto lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  margin-bottom: 20px; /* Espaçamento entre os pratos */
+}
 
-  </body>
+.prato img {
+  max-width: 200px; /* Largura máxima da imagem */
+  margin-right: 20px; /* Espaçamento entre imagem e texto */
+}
+
+/* Estilos para as outras seções... */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+ </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>[Nome do Restaurante]</h1>
+        <p>A melhor culinária da cidade!</p>
+        <button>Reserve sua mesa</button>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Conteúdo sobre o restaurante...</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="prato">
+          <img src="imagem_prato.jpg" alt="Nome do Prato">
+          <h3>Nome do Prato</h3>
+          <p>Descrição do prato.</p>
+        </div>
+        </section>
+
+    <section id="reservas">
+      <h2>Reservas</h2>
+      <form>
+        </form>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Informações de contato...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Nome do Restaurante</p>
+    </footer>
+
+    <script>
+     // Exemplo: rolagem suave para as seções
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+    </script>
+ 
+</body>
 </html>
