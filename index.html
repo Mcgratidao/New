@@ -3,123 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome do Restaurante</title>
+    <title> Marone $ Ivo </title>
     <style> /* CSS dentro da tag <style> */
         body {
             font-family: sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav li {
-            margin: 0 15px;
-        }
-
-        #hero {
-            background-image: url("imagem_fundo.jpg");
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        #hero h1 {
-            font-size: 3em;
-        }
-
-        .prato {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .prato img {
-            max-width: 200px;
-            margin-right: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            background-color: pink;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reservas">Reservas</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <h1>[Nome do Restaurante]</h1>
-        <p>A melhor culinária da cidade!</p>
-        <button>Reserve sua mesa</button>
-    </section>
-
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Conteúdo sobre o restaurante...</p>
-    </section>
-
-    <section id="menu">
-        <h2>Menu</h2>
-        <div class="prato">
-            <img src="imagem_prato.jpg" alt="Nome do Prato">
-            <h3>Nome do Prato</h3>
-            <p>Descrição do prato.</p>
-        </div>
-    </section>
-
-    <section id="reservas">
-        <h2>Reservas</h2>
-        <form>
-            </form>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Informações de contato...</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Nome do Restaurante</p>
-    </footer>
-
-    <script> // JavaScript dentro da tag <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
 </body>
 </html>
