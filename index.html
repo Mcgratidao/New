@@ -22,6 +22,10 @@
         button {
             margin: 5px;
         }
+        #animatedTitle {
+            font-size: 3rem; /* Aumenta o tamanho da letra */
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -48,8 +52,8 @@
             document.body.style.backgroundColor = "black";
         }
 
-        // Curvas para a animação de velocidade da luz
-        const shiftCurve = mojs.easing.path('M0,100 C10,0 90,0 100,100'); // Movimento rápido
+        // Curvas para a animação de velocidade reduzida
+        const shiftCurve = mojs.easing.path('M0,100 C10,0 90,0 100,100'); // Movimento mais lento
         const scaleCurve = mojs.easing.path('M0,100 C20,120 80,80 100,100'); // Efeito de esticamento
 
         // Configurar animação para o título
@@ -57,11 +61,11 @@
 
         const titleAnimation = new mojs.Html({
             el: animatedTitle,
-            x: { [-200]: 200, curve: shiftCurve }, // Movimento horizontal rápido
-            scaleX: { 1: 1.5, curve: scaleCurve }, // Estica durante o movimento
-            scaleY: { 1: 0.5, curve: scaleCurve }, // Achata verticalmente
+            x: { [-200]: 200, curve: shiftCurve }, // Movimento horizontal
+            scaleX: { 1: 1.2, curve: scaleCurve }, // Estica durante o movimento
+            scaleY: { 1: 0.8, curve: scaleCurve }, // Achata verticalmente
             origin: '50% 50%',
-            duration: 500, // Duração rápida para criar a sensação de velocidade
+            duration: 3000, // Aumenta a duração para movimento mais lento
             isYoyo: true, // Vai e volta
             repeat: 999, // Repete indefinidamente
         }).play();
