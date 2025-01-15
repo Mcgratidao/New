@@ -26,14 +26,15 @@
     </style>
 </head>
 <body>
-    <!-- Contêiner principal -->
-    <div id="mainContainer" class="container">
-        <!-- Conteúdo inicial -->
-        <div id="content1">
-            <h1> Maroni & Ivo </h1>
-            <button type="button" class="btn btn-success" onclick="showNextContent()">Avançar</button>
-            <button type="button" class="btn btn-danger" onclick="alert('Botão Danger clicado!')">Danger</button>
-        </div>
+   <!-- Contêiner principal -->
+<div id="mainContainer" class="container">
+    <!-- Conteúdo inicial -->
+    <div id="content1">
+        <h1 id="animatedTitle">Maroni & Ivo</h1>
+        <button type="button" class="btn btn-success" onclick="showNextContent()">Avançar</button>
+        <button type="button" class="btn btn-danger" onclick="alert('Botão Danger clicado!')">Danger</button>
+    </div>
+</div>
 
         <!-- Conteúdo alternativo -->
         <div id="content2" style="display: none;">
@@ -50,8 +51,28 @@ function showNextContent() {
   document.body.style.backgroundColor = "black";
 
 }
-        
+const shiftCurve = mojs.easing.path('M0,100 C50,100 50,100 50,50 C50,0 50,0 100,0');
+const scaleCurveBase = mojs.easing.path('M0,100 C21.3776817,95.8051376 50,77.3262711 50,-700 C50,80.1708527 76.6222458,93.9449005 100,100');
+const scaleCurve = (p) => 1 + scaleCurveBase(p);
+const nScaleCurve = (p) => 1 - scaleCurveBase(p) / 10;
+
+// Seleciona o elemento <h1>
+const animatedTitle = document.getElementById('animatedTitle');
+
+// Configura a animação
+const circle = new mojs.Html({
+  el: animatedTitle, // Vincula ao elemento <h1>
+  x: { [-125]: 125, easing: shiftCurve },
+  scaleX: { 1: 1, curve: scaleCurve },
+  scaleY: { 1: 1, curve: nScaleCurve },
+  origin: { '0 50%': '100% 50%', easing: shiftCurve },
+  duration: 800,
+  isYoyo: true,
+  delay: 500,
+  repeat: 999
+}).play();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
 </body>
 </html>
